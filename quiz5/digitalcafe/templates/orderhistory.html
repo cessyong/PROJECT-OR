@@ -1,0 +1,21 @@
+{% include "header.html" %}
+    <h1>Order History</h1>
+  
+        {% for orders in order_list %}
+            
+            <table>
+            <tr><th><u>Order Date&nbsp;&nbsp; </u></th><td colspan="2"><u>{{orders["orderdate"]}}</u></td></tr>
+            <tr><th>Item</th><th>Quantity</th><th>Subtotal</th></tr>
+        
+            {% set items = orders["details"] %}
+        
+            {% for item in items %}
+                <tr><td>{{item["name"]}}</td><td>{{item["qty"]}}</td><td>{{item["subtotal"]}}</td></tr>
+            {% endfor %}
+                
+            </table>
+            <br>
+
+        {% endfor %}
+    
+{% include "footer.html" %}

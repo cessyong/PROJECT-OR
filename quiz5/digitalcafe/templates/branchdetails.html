@@ -1,0 +1,15 @@
+{% include "header.html" %}
+    <h1>Branch Details</h1>
+    <table>
+        <tr>
+            <td>Name</td><td> {{ branch["name"]}} </td>
+        </tr>
+        <tr>
+            <td>Phone number&nbsp;&nbsp;</td><td> {{ branch["phonenumber"]}} </td>
+        </tr>
+    </table>
+    <br>
+    <a href="/branches">Back</a>
+    <br>
+    <br>
+{% include "footer.html" %}
